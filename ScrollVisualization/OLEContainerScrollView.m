@@ -115,13 +115,18 @@ static void *KVOContext = &KVOContext;
 {
     [super layoutSubviews];
     
-    // Translate scroll view content offset to content view bounds
+    // Translate the container view's content offset to contentView bounds.
+    // This keeps the contentview always centered on the visible portion of the container view's
+    // full content size, and avoids the need to make the contentView large enough to fit the
+    // container view's full content size.
     self.contentView.frame = self.bounds;
     self.contentView.bounds = (CGRect){ self.contentOffset, self.contentView.bounds.size };
     
-    // The "virtual" content offset while iterating over all views,
-    // i.e. including the full contentSize of all scroll views we have already iterated over.
-    CGFloat virtualYOffset = 0.0;
+    // The logical vertical offset where the current subview (while iterating over all subviews)
+    // must be positioned. Subviews are positioned below each other, in the order they were added
+    // to the container. For scroll views, we reserve their entire contentSize.height as vertical
+    // space. For non-scroll views, we reserve their current frame.size.height as vertical space.
+    CGFloat yOffsetOfCurrentSubview = 0.0;
     
     for (UIView *subview in self.contentView.subviews)
     {
@@ -130,21 +135,21 @@ static void *KVOContext = &KVOContext;
             CGRect frame = scrollView.frame;
             CGPoint contentOffset = scrollView.contentOffset;
 
-            // Translate the virtual offset into the sub-scrollview's real content offset and frame size.
+            // Translate the logical offset into the sub-scrollview's real content offset and frame size.
             // Methodology:
 
             // (1) As long as the sub-scrollview has not yet reached the top of the screen, set its scroll position
             // to 0.0 and position it just like a normal view. Its content scrolls naturally as the container
             // scroll view scrolls.
-            if (self.contentOffset.y < virtualYOffset) {
+            if (self.contentOffset.y < yOffsetOfCurrentSubview) {
                 contentOffset.y = 0.0;
-                frame.origin.y = virtualYOffset;
+                frame.origin.y = yOffsetOfCurrentSubview;
             }
             // (2) If the user has scrolled far enough down so that the sub-scrollview reaches the top of the
             // screen, position its frame at 0.0 and start adjusting the sub-scrollview's content offset to
             // scroll its content.
             else {
-                contentOffset.y = self.contentOffset.y - virtualYOffset;
+                contentOffset.y = self.contentOffset.y - yOffsetOfCurrentSubview;
                 frame.origin.y = self.contentOffset.y;
             }
 
@@ -159,19 +164,19 @@ static void *KVOContext = &KVOContext;
             scrollView.frame = frame;
             scrollView.contentOffset = contentOffset;
 
-            virtualYOffset += scrollView.contentSize.height;
+            yOffsetOfCurrentSubview += scrollView.contentSize.height;
         }
         else {
             // Normal views are simply positioned at the current offset
             CGRect frame = subview.frame;
-            frame.origin.y = virtualYOffset;
+            frame.origin.y = yOffsetOfCurrentSubview;
             subview.frame = frame;
             
-            virtualYOffset += frame.size.height;
+            yOffsetOfCurrentSubview += frame.size.height;
         }
     }
     
-    self.contentSize = CGSizeMake(self.bounds.size.width, fmax(virtualYOffset, self.bounds.size.height));
+    self.contentSize = CGSizeMake(self.bounds.size.width, fmax(yOffsetOfCurrentSubview, self.bounds.size.height));
 }
 
 @end
