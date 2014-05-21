@@ -1,10 +1,10 @@
 platform :ios, "7.0"
 
-target "ScrollVisualization" do
+target "OLEContainerScrollViewDemo" do
   pod 'pop'
 end
 
-target "ScrollVisualizationTests" do
+target "OLEContainerScrollViewDemoTests" do
 
 end
 

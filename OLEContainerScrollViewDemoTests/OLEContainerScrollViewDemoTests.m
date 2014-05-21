@@ -1,6 +1,6 @@
 //
-//  ScrollVisualizationTests.m
-//  ScrollVisualizationTests
+//  OLEContainerScrollViewDemoTests.m
+//  OLEContainerScrollViewDemoTests
 //
 //  Created by Ole Begemann on 16/03/14.
 //  Copyright (c) 2014 Ole Begemann. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface ScrollVisualizationTests : XCTestCase
+@interface OLEContainerScrollViewDemoTests : XCTestCase
 
 @end
 
-@implementation ScrollVisualizationTests
+@implementation OLEContainerScrollViewDemoTests
 
 - (void)setUp
 {

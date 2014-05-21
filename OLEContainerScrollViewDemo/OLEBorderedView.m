@@ -1,6 +1,6 @@
 //
 //  OLEBorderedView.m
-//  ScrollVisualization
+//  OLEContainerScrollViewDemo
 //
 //  Created by Ole Begemann on 09.05.14.
 //  Copyright (c) 2014 Ole Begemann. All rights reserved.
