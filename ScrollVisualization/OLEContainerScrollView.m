@@ -16,6 +16,7 @@
 
 @end
 
+
 @implementation OLEContainerScrollView
 
 static void *KVOContext = &KVOContext;
@@ -132,17 +133,17 @@ static void *KVOContext = &KVOContext;
             // Translate the virtual offset into the sub-scrollview's real content offset and frame size.
             // Methodology:
 
+            // (1) As long as the sub-scrollview has not yet reached the top of the screen, set its scroll position
+            // to 0.0 and position it just like a normal view. Its content scrolls naturally as the container
+            // scroll view scrolls.
             if (self.contentOffset.y < virtualYOffset) {
-                // (1) As long as the sub-scrollview has not yet reached the top of the screen, set its scroll position
-                // to 0.0 and position it just like a normal view. Its content scrolls naturally as the container
-                // scroll view scrolls.
                 contentOffset.y = 0.0;
                 frame.origin.y = virtualYOffset;
             }
+            // (2) If the user has scrolled far enough down so that the sub-scrollview reaches the top of the
+            // screen, position its frame at 0.0 and start adjusting the sub-scrollview's content offset to
+            // scroll its content.
             else {
-                // (2) If the user has scrolled far enough down so that the sub-scrollview reaches the top of the
-                // screen, position its frame at 0.0 and start adjusting the sub-scrollview's content offset to
-                // scroll its content.
                 contentOffset.y = self.contentOffset.y - virtualYOffset;
                 frame.origin.y = self.contentOffset.y;
             }
