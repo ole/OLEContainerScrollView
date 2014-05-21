@@ -6,7 +6,7 @@ Written by Ole Begemann, May 2014.
 
 ## Blog Post
 
-Please read my [blog post about OLEContainerScrollView](http:///blog/2014/05/scrollviews-inside-scrollviews/) for details about the implementation.
+Please read my [blog post about OLEContainerScrollView](http://oleb.net/blog/2014/05/scrollviews-inside-scrollviews/) for details about the implementation.
 
 ## Demo App
 
