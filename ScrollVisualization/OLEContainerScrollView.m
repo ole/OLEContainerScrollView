@@ -12,6 +12,7 @@
 
 @interface OLEContainerScrollView ()
 
+@property (nonatomic, readonly) UIView *contentView;
 @property (nonatomic, assign) CGFloat contentHeight;
 
 @end

@@ -10,8 +10,6 @@
 
 @interface OLEContainerScrollView : UIScrollView
 
-@property (nonatomic, readonly) UIView *contentView;
-
 - (void)addSubviewToContainer:(UIView *)subview;
 - (void)removeSubviewFromContainer:(UIView *)subview;
 
