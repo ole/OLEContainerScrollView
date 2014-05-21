@@ -9,7 +9,6 @@
 #import "CustomContainerScrollViewController.h"
 #import "OLEContainerScrollView.h"
 #import "SimulatedTableView.h"
-#import <pop/POP.h>
 
 @interface CustomContainerScrollViewController ()
 
