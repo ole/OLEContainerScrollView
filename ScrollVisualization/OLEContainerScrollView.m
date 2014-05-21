@@ -13,7 +13,6 @@
 @interface OLEContainerScrollView ()
 
 @property (nonatomic, readonly) UIView *contentView;
-@property (nonatomic, assign) CGFloat contentHeight;
 
 @end
 
@@ -45,8 +44,6 @@ static void *KVOContext = &KVOContext;
 
 - (void)commonInitForOLEContainerScrollView
 {
-    self.contentHeight = 0.0;
-    
     _contentView = [[UIView alloc] initWithFrame:CGRectZero];
     [self addSubview:_contentView];
 }
@@ -113,12 +110,6 @@ static void *KVOContext = &KVOContext;
 
 #pragma mark - Layout
 
-- (void)setContentHeight:(CGFloat)contentHeight
-{
-    _contentHeight = contentHeight;
-    self.contentSize = CGSizeMake(self.bounds.size.width, fmax(self.contentHeight, self.bounds.size.height));
-}
-
 - (void)layoutSubviews
 {
     [super layoutSubviews];
@@ -179,7 +170,7 @@ static void *KVOContext = &KVOContext;
         }
     }
     
-    self.contentHeight = virtualYOffset;
+    self.contentSize = CGSizeMake(self.bounds.size.width, fmax(virtualYOffset, self.bounds.size.height));
 }
 
 @end
