@@ -1,0 +1,572 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D2A88E8191D1DC300CEE791 /* OLEBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A88E7191D1DC300CEE791 /* OLEBorderedView.m */; };
+		5D2A88EB192246D700CEE791 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A88EA192246D700CEE791 /* SimpleTableViewController.m */; };
+		5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D63B222192250990064DB38 /* NaiveContainerScrollViewController.m */; };
+		5DA0069E190FED63006421A9 /* OLEContainerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA0069D190FED63006421A9 /* OLEContainerScrollView.m */; };
+		5DBDF1E518D5F26B005B1E18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E418D5F26B005B1E18 /* Foundation.framework */; };
+		5DBDF1E718D5F26B005B1E18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E618D5F26B005B1E18 /* CoreGraphics.framework */; };
+		5DBDF1E918D5F26B005B1E18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E818D5F26B005B1E18 /* UIKit.framework */; };
+		5DBDF1EF18D5F26B005B1E18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DBDF1ED18D5F26B005B1E18 /* InfoPlist.strings */; };
+		5DBDF1F118D5F26B005B1E18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDF1F018D5F26B005B1E18 /* main.m */; };
+		5DBDF1F518D5F26B005B1E18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDF1F418D5F26B005B1E18 /* AppDelegate.m */; };
+		5DBDF1F818D5F26B005B1E18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DBDF1F618D5F26B005B1E18 /* Main.storyboard */; };
+		5DBDF1FB18D5F26B005B1E18 /* CustomContainerScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDF1FA18D5F26B005B1E18 /* CustomContainerScrollViewController.m */; };
+		5DBDF1FD18D5F26B005B1E18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DBDF1FC18D5F26B005B1E18 /* Images.xcassets */; };
+		5DBDF20418D5F26B005B1E18 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF20318D5F26B005B1E18 /* XCTest.framework */; };
+		5DBDF20518D5F26B005B1E18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E418D5F26B005B1E18 /* Foundation.framework */; };
+		5DBDF20618D5F26B005B1E18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E818D5F26B005B1E18 /* UIKit.framework */; };
+		5DBDF20E18D5F26B005B1E18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DBDF20C18D5F26B005B1E18 /* InfoPlist.strings */; };
+		5DBDF21018D5F26B005B1E18 /* ScrollVisualizationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDF20F18D5F26B005B1E18 /* ScrollVisualizationTests.m */; };
+		5DBDF21B18D5F2A2005B1E18 /* SimulatedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDF21A18D5F2A2005B1E18 /* SimulatedTableView.m */; };
+		AE94BC169B3F4B43AF1FF5ED /* libPods-ScrollVisualization.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 037FDCFAA1F542F782FD80AA /* libPods-ScrollVisualization.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5DBDF20718D5F26B005B1E18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DBDF1D918D5F26B005B1E18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DBDF1E018D5F26B005B1E18;
+			remoteInfo = ScrollVisualization;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		037FDCFAA1F542F782FD80AA /* libPods-ScrollVisualization.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ScrollVisualization.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1327926707B0403E8FBC85C4 /* Pods-ScrollVisualization.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScrollVisualization.xcconfig"; path = "Pods/Pods-ScrollVisualization.xcconfig"; sourceTree = "<group>"; };
+		5D2A88E6191D1DC300CEE791 /* OLEBorderedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLEBorderedView.h; sourceTree = "<group>"; };
+		5D2A88E7191D1DC300CEE791 /* OLEBorderedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLEBorderedView.m; sourceTree = "<group>"; };
+		5D2A88E9192246D700CEE791 /* SimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
+		5D2A88EA192246D700CEE791 /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
+		5D63B221192250990064DB38 /* NaiveContainerScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaiveContainerScrollViewController.h; sourceTree = "<group>"; };
+		5D63B222192250990064DB38 /* NaiveContainerScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaiveContainerScrollViewController.m; sourceTree = "<group>"; };
+		5DA0069C190FED63006421A9 /* OLEContainerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLEContainerScrollView.h; sourceTree = "<group>"; };
+		5DA0069D190FED63006421A9 /* OLEContainerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLEContainerScrollView.m; sourceTree = "<group>"; };
+		5DBDF1E118D5F26B005B1E18 /* ScrollVisualization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollVisualization.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DBDF1E418D5F26B005B1E18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5DBDF1E618D5F26B005B1E18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5DBDF1E818D5F26B005B1E18 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5DBDF1EC18D5F26B005B1E18 /* ScrollVisualization-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScrollVisualization-Info.plist"; sourceTree = "<group>"; };
+		5DBDF1EE18D5F26B005B1E18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5DBDF1F018D5F26B005B1E18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5DBDF1F218D5F26B005B1E18 /* ScrollVisualization-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ScrollVisualization-Prefix.pch"; sourceTree = "<group>"; };
+		5DBDF1F318D5F26B005B1E18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5DBDF1F418D5F26B005B1E18 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5DBDF1F718D5F26B005B1E18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DBDF1F918D5F26B005B1E18 /* CustomContainerScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomContainerScrollViewController.h; sourceTree = "<group>"; };
+		5DBDF1FA18D5F26B005B1E18 /* CustomContainerScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomContainerScrollViewController.m; sourceTree = "<group>"; };
+		5DBDF1FC18D5F26B005B1E18 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5DBDF20218D5F26B005B1E18 /* ScrollVisualizationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollVisualizationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DBDF20318D5F26B005B1E18 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5DBDF20B18D5F26B005B1E18 /* ScrollVisualizationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScrollVisualizationTests-Info.plist"; sourceTree = "<group>"; };
+		5DBDF20D18D5F26B005B1E18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5DBDF20F18D5F26B005B1E18 /* ScrollVisualizationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollVisualizationTests.m; sourceTree = "<group>"; };
+		5DBDF21918D5F2A2005B1E18 /* SimulatedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulatedTableView.h; sourceTree = "<group>"; };
+		5DBDF21A18D5F2A2005B1E18 /* SimulatedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulatedTableView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DBDF1DE18D5F26B005B1E18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DBDF1E718D5F26B005B1E18 /* CoreGraphics.framework in Frameworks */,
+				5DBDF1E918D5F26B005B1E18 /* UIKit.framework in Frameworks */,
+				5DBDF1E518D5F26B005B1E18 /* Foundation.framework in Frameworks */,
+				AE94BC169B3F4B43AF1FF5ED /* libPods-ScrollVisualization.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DBDF1FF18D5F26B005B1E18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DBDF20418D5F26B005B1E18 /* XCTest.framework in Frameworks */,
+				5DBDF20618D5F26B005B1E18 /* UIKit.framework in Frameworks */,
+				5DBDF20518D5F26B005B1E18 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D56AD97192A2C7400C42405 /* Demo App */ = {
+			isa = PBXGroup;
+			children = (
+				5DBDF1F318D5F26B005B1E18 /* AppDelegate.h */,
+				5DBDF1F418D5F26B005B1E18 /* AppDelegate.m */,
+				5DBDF1F618D5F26B005B1E18 /* Main.storyboard */,
+				5D2A88E9192246D700CEE791 /* SimpleTableViewController.h */,
+				5D2A88EA192246D700CEE791 /* SimpleTableViewController.m */,
+				5D63B221192250990064DB38 /* NaiveContainerScrollViewController.h */,
+				5D63B222192250990064DB38 /* NaiveContainerScrollViewController.m */,
+				5DBDF1F918D5F26B005B1E18 /* CustomContainerScrollViewController.h */,
+				5DBDF1FA18D5F26B005B1E18 /* CustomContainerScrollViewController.m */,
+			);
+			name = "Demo App";
+			sourceTree = "<group>";
+		};
+		5D56AD98192A2C8000C42405 /* OLEContainerScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				5DA0069C190FED63006421A9 /* OLEContainerScrollView.h */,
+				5DA0069D190FED63006421A9 /* OLEContainerScrollView.m */,
+			);
+			name = OLEContainerScrollView;
+			sourceTree = "<group>";
+		};
+		5D56AD99192A2C9000C42405 /* Helper Views */ = {
+			isa = PBXGroup;
+			children = (
+				5DBDF21918D5F2A2005B1E18 /* SimulatedTableView.h */,
+				5DBDF21A18D5F2A2005B1E18 /* SimulatedTableView.m */,
+				5D2A88E6191D1DC300CEE791 /* OLEBorderedView.h */,
+				5D2A88E7191D1DC300CEE791 /* OLEBorderedView.m */,
+			);
+			name = "Helper Views";
+			sourceTree = "<group>";
+		};
+		5DBDF1D818D5F26B005B1E18 = {
+			isa = PBXGroup;
+			children = (
+				5DBDF1EA18D5F26B005B1E18 /* ScrollVisualization */,
+				5DBDF20918D5F26B005B1E18 /* ScrollVisualizationTests */,
+				5DBDF1E318D5F26B005B1E18 /* Frameworks */,
+				5DBDF1E218D5F26B005B1E18 /* Products */,
+				1327926707B0403E8FBC85C4 /* Pods-ScrollVisualization.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		5DBDF1E218D5F26B005B1E18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DBDF1E118D5F26B005B1E18 /* ScrollVisualization.app */,
+				5DBDF20218D5F26B005B1E18 /* ScrollVisualizationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DBDF1E318D5F26B005B1E18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DBDF1E418D5F26B005B1E18 /* Foundation.framework */,
+				5DBDF1E618D5F26B005B1E18 /* CoreGraphics.framework */,
+				5DBDF1E818D5F26B005B1E18 /* UIKit.framework */,
+				5DBDF20318D5F26B005B1E18 /* XCTest.framework */,
+				037FDCFAA1F542F782FD80AA /* libPods-ScrollVisualization.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5DBDF1EA18D5F26B005B1E18 /* ScrollVisualization */ = {
+			isa = PBXGroup;
+			children = (
+				5D56AD97192A2C7400C42405 /* Demo App */,
+				5D56AD98192A2C8000C42405 /* OLEContainerScrollView */,
+				5D56AD99192A2C9000C42405 /* Helper Views */,
+				5DBDF1FC18D5F26B005B1E18 /* Images.xcassets */,
+				5DBDF1EB18D5F26B005B1E18 /* Supporting Files */,
+			);
+			path = ScrollVisualization;
+			sourceTree = "<group>";
+		};
+		5DBDF1EB18D5F26B005B1E18 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DBDF1EC18D5F26B005B1E18 /* ScrollVisualization-Info.plist */,
+				5DBDF1ED18D5F26B005B1E18 /* InfoPlist.strings */,
+				5DBDF1F018D5F26B005B1E18 /* main.m */,
+				5DBDF1F218D5F26B005B1E18 /* ScrollVisualization-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5DBDF20918D5F26B005B1E18 /* ScrollVisualizationTests */ = {
+			isa = PBXGroup;
+			children = (
+				5DBDF20F18D5F26B005B1E18 /* ScrollVisualizationTests.m */,
+				5DBDF20A18D5F26B005B1E18 /* Supporting Files */,
+			);
+			path = ScrollVisualizationTests;
+			sourceTree = "<group>";
+		};
+		5DBDF20A18D5F26B005B1E18 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DBDF20B18D5F26B005B1E18 /* ScrollVisualizationTests-Info.plist */,
+				5DBDF20C18D5F26B005B1E18 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DBDF1E018D5F26B005B1E18 /* ScrollVisualization */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DBDF21318D5F26B005B1E18 /* Build configuration list for PBXNativeTarget "ScrollVisualization" */;
+			buildPhases = (
+				72E16A8251D545A6B49040B0 /* Check Pods Manifest.lock */,
+				5DBDF1DD18D5F26B005B1E18 /* Sources */,
+				5DBDF1DE18D5F26B005B1E18 /* Frameworks */,
+				5DBDF1DF18D5F26B005B1E18 /* Resources */,
+				9AEE2EB2631246C99D18134B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScrollVisualization;
+			productName = ScrollVisualization;
+			productReference = 5DBDF1E118D5F26B005B1E18 /* ScrollVisualization.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5DBDF20118D5F26B005B1E18 /* ScrollVisualizationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DBDF21618D5F26B005B1E18 /* Build configuration list for PBXNativeTarget "ScrollVisualizationTests" */;
+			buildPhases = (
+				5DBDF1FE18D5F26B005B1E18 /* Sources */,
+				5DBDF1FF18D5F26B005B1E18 /* Frameworks */,
+				5DBDF20018D5F26B005B1E18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DBDF20818D5F26B005B1E18 /* PBXTargetDependency */,
+			);
+			name = ScrollVisualizationTests;
+			productName = ScrollVisualizationTests;
+			productReference = 5DBDF20218D5F26B005B1E18 /* ScrollVisualizationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DBDF1D918D5F26B005B1E18 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ole Begemann";
+				TargetAttributes = {
+					5DBDF20118D5F26B005B1E18 = {
+						TestTargetID = 5DBDF1E018D5F26B005B1E18;
+					};
+				};
+			};
+			buildConfigurationList = 5DBDF1DC18D5F26B005B1E18 /* Build configuration list for PBXProject "ScrollVisualization" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DBDF1D818D5F26B005B1E18;
+			productRefGroup = 5DBDF1E218D5F26B005B1E18 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DBDF1E018D5F26B005B1E18 /* ScrollVisualization */,
+				5DBDF20118D5F26B005B1E18 /* ScrollVisualizationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DBDF1DF18D5F26B005B1E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DBDF1FD18D5F26B005B1E18 /* Images.xcassets in Resources */,
+				5DBDF1EF18D5F26B005B1E18 /* InfoPlist.strings in Resources */,
+				5DBDF1F818D5F26B005B1E18 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DBDF20018D5F26B005B1E18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DBDF20E18D5F26B005B1E18 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72E16A8251D545A6B49040B0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9AEE2EB2631246C99D18134B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-ScrollVisualization-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DBDF1DD18D5F26B005B1E18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DBDF1FB18D5F26B005B1E18 /* CustomContainerScrollViewController.m in Sources */,
+				5D2A88E8191D1DC300CEE791 /* OLEBorderedView.m in Sources */,
+				5DBDF1F518D5F26B005B1E18 /* AppDelegate.m in Sources */,
+				5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */,
+				5DBDF21B18D5F2A2005B1E18 /* SimulatedTableView.m in Sources */,
+				5DA0069E190FED63006421A9 /* OLEContainerScrollView.m in Sources */,
+				5D2A88EB192246D700CEE791 /* SimpleTableViewController.m in Sources */,
+				5DBDF1F118D5F26B005B1E18 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DBDF1FE18D5F26B005B1E18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DBDF21018D5F26B005B1E18 /* ScrollVisualizationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DBDF20818D5F26B005B1E18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DBDF1E018D5F26B005B1E18 /* ScrollVisualization */;
+			targetProxy = 5DBDF20718D5F26B005B1E18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5DBDF1ED18D5F26B005B1E18 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DBDF1EE18D5F26B005B1E18 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5DBDF1F618D5F26B005B1E18 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DBDF1F718D5F26B005B1E18 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5DBDF20C18D5F26B005B1E18 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DBDF20D18D5F26B005B1E18 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DBDF21118D5F26B005B1E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		5DBDF21218D5F26B005B1E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DBDF21418D5F26B005B1E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1327926707B0403E8FBC85C4 /* Pods-ScrollVisualization.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ScrollVisualization/ScrollVisualization-Prefix.pch";
+				INFOPLIST_FILE = "ScrollVisualization/ScrollVisualization-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5DBDF21518D5F26B005B1E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1327926707B0403E8FBC85C4 /* Pods-ScrollVisualization.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ScrollVisualization/ScrollVisualization-Prefix.pch";
+				INFOPLIST_FILE = "ScrollVisualization/ScrollVisualization-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5DBDF21718D5F26B005B1E18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ScrollVisualization.app/ScrollVisualization";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ScrollVisualization/ScrollVisualization-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ScrollVisualizationTests/ScrollVisualizationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5DBDF21818D5F26B005B1E18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ScrollVisualization.app/ScrollVisualization";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ScrollVisualization/ScrollVisualization-Prefix.pch";
+				INFOPLIST_FILE = "ScrollVisualizationTests/ScrollVisualizationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DBDF1DC18D5F26B005B1E18 /* Build configuration list for PBXProject "ScrollVisualization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DBDF21118D5F26B005B1E18 /* Debug */,
+				5DBDF21218D5F26B005B1E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DBDF21318D5F26B005B1E18 /* Build configuration list for PBXNativeTarget "ScrollVisualization" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DBDF21418D5F26B005B1E18 /* Debug */,
+				5DBDF21518D5F26B005B1E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DBDF21618D5F26B005B1E18 /* Build configuration list for PBXNativeTarget "ScrollVisualizationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DBDF21718D5F26B005B1E18 /* Debug */,
+				5DBDF21818D5F26B005B1E18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DBDF1D918D5F26B005B1E18 /* Project object */;
+}
