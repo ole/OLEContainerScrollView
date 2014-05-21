@@ -166,7 +166,7 @@ typedef OLEBorderedView OLESimulatedTableViewCell;
 
 - (void)setShowBoundsOutline:(BOOL)showBoundsOutline
 {
-    showBoundsOutline = _showBoundsOutline;
+    _showBoundsOutline = showBoundsOutline;
     [self setNeedsLayout];
 }
 
