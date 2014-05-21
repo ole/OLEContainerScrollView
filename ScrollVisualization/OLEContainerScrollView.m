@@ -170,6 +170,7 @@ static void *KVOContext = &KVOContext;
             // Normal views are simply positioned at the current offset
             CGRect frame = subview.frame;
             frame.origin.y = yOffsetOfCurrentSubview;
+            frame.size.width = self.contentView.bounds.size.width;
             subview.frame = frame;
             
             yOffsetOfCurrentSubview += frame.size.height;
