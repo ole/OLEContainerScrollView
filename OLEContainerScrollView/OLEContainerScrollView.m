@@ -86,11 +86,13 @@ static void *KVOContext = &KVOContext;
     [self setNeedsLayout];
 }
 
-- (void)bringSubviewToFront:(UIView *)view {
+- (void)bringSubviewToFront:(UIView *)view
+{
     [self.contentView bringSubviewToFront:view];
 }
 
-- (void)sendSubviewToBack:(UIView *)view {
+- (void)sendSubviewToBack:(UIView *)view
+{
     [self.contentView sendSubviewToBack:view];
 }
 
