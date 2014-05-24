@@ -13,6 +13,7 @@
 @interface OLEContainerScrollView ()
 
 @property (nonatomic, readonly) UIView *contentView;
+@property (nonatomic, readonly) NSMutableArray *subviewsInLayoutOrder;
 
 @end
 
@@ -47,6 +48,7 @@ static void *KVOContext = &KVOContext;
 {
     _contentView = [[UIView alloc] initWithFrame:CGRectZero];
     [self addSubview:_contentView];
+    _subviewsInLayoutOrder = [NSMutableArray arrayWithCapacity:4];
 }
 
 #pragma mark - Adding and removing subviews
@@ -55,6 +57,7 @@ static void *KVOContext = &KVOContext;
 {
     NSParameterAssert(subview != nil);
     [self.contentView addSubview:subview];
+    [self.subviewsInLayoutOrder addObject:subview];
     
     if ([subview isKindOfClass:[UIScrollView class]]) {
         UIScrollView *scrollView = (UIScrollView *)subview;
@@ -79,7 +82,16 @@ static void *KVOContext = &KVOContext;
         [subview removeObserver:self forKeyPath:NSStringFromSelector(@selector(bounds)) context:KVOContext];
     }
     [subview removeFromSuperview];
+    [self.subviewsInLayoutOrder removeObject:subview];
     [self setNeedsLayout];
+}
+
+- (void)bringSubviewToFront:(UIView *)view {
+    [self.contentView bringSubviewToFront:view];
+}
+
+- (void)sendSubviewToBack:(UIView *)view {
+    [self.contentView sendSubviewToBack:view];
 }
 
 #pragma mark - KVO
@@ -128,7 +140,7 @@ static void *KVOContext = &KVOContext;
     // space. For non-scroll views, we reserve their current frame.size.height as vertical space.
     CGFloat yOffsetOfCurrentSubview = 0.0;
     
-    for (UIView *subview in self.contentView.subviews)
+    for (UIView *subview in self.subviewsInLayoutOrder)
     {
         if ([subview isKindOfClass:[UIScrollView class]]) {
             UIScrollView *scrollView = (UIScrollView *)subview;
