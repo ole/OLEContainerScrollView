@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D050BE41959D8F200D2447F /* MultipleCollectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D050BE31959D8F200D2447F /* MultipleCollectionsViewController.m */; };
+		5D050BE71959DEAD00D2447F /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D050BE61959DEAD00D2447F /* UIColor+RandomColor.m */; };
 		5D2A88E8191D1DC300CEE791 /* OLEBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A88E7191D1DC300CEE791 /* OLEBorderedView.m */; };
 		5D2A88EB192246D700CEE791 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A88EA192246D700CEE791 /* SimpleTableViewController.m */; };
 		5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D63B222192250990064DB38 /* NaiveContainerScrollViewController.m */; };
@@ -39,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D050BE21959D8F200D2447F /* MultipleCollectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleCollectionsViewController.h; sourceTree = "<group>"; };
+		5D050BE31959D8F200D2447F /* MultipleCollectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleCollectionsViewController.m; sourceTree = "<group>"; };
+		5D050BE51959DEAD00D2447F /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
+		5D050BE61959DEAD00D2447F /* UIColor+RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RandomColor.m"; sourceTree = "<group>"; };
 		5D2A88E6191D1DC300CEE791 /* OLEBorderedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLEBorderedView.h; sourceTree = "<group>"; };
 		5D2A88E7191D1DC300CEE791 /* OLEBorderedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLEBorderedView.m; sourceTree = "<group>"; };
 		5D2A88E9192246D700CEE791 /* SimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
@@ -106,19 +112,23 @@
 				5D63B222192250990064DB38 /* NaiveContainerScrollViewController.m */,
 				5DBDF1F918D5F26B005B1E18 /* CustomContainerScrollViewController.h */,
 				5DBDF1FA18D5F26B005B1E18 /* CustomContainerScrollViewController.m */,
+				5D050BE21959D8F200D2447F /* MultipleCollectionsViewController.h */,
+				5D050BE31959D8F200D2447F /* MultipleCollectionsViewController.m */,
 			);
 			name = "Demo App";
 			sourceTree = "<group>";
 		};
-		5D56AD99192A2C9000C42405 /* Helper Views */ = {
+		5D56AD99192A2C9000C42405 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				5DBDF21918D5F2A2005B1E18 /* OLESimulatedTableView.h */,
 				5DBDF21A18D5F2A2005B1E18 /* OLESimulatedTableView.m */,
 				5D2A88E6191D1DC300CEE791 /* OLEBorderedView.h */,
 				5D2A88E7191D1DC300CEE791 /* OLEBorderedView.m */,
+				5D050BE51959DEAD00D2447F /* UIColor+RandomColor.h */,
+				5D050BE61959DEAD00D2447F /* UIColor+RandomColor.m */,
 			);
-			name = "Helper Views";
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		5DBDF1D818D5F26B005B1E18 = {
@@ -156,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				5D56AD97192A2C7400C42405 /* Demo App */,
-				5D56AD99192A2C9000C42405 /* Helper Views */,
+				5D56AD99192A2C9000C42405 /* Helpers */,
 				5DBDF1FC18D5F26B005B1E18 /* Images.xcassets */,
 				5DBDF1EB18D5F26B005B1E18 /* Supporting Files */,
 			);
@@ -300,9 +310,11 @@
 			files = (
 				5DEAE59F192CF6A80075B6DE /* OLEContainerScrollView.m in Sources */,
 				5DBDF1FB18D5F26B005B1E18 /* CustomContainerScrollViewController.m in Sources */,
+				5D050BE41959D8F200D2447F /* MultipleCollectionsViewController.m in Sources */,
 				5D2A88E8191D1DC300CEE791 /* OLEBorderedView.m in Sources */,
 				5DBDF1F518D5F26B005B1E18 /* AppDelegate.m in Sources */,
 				5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */,
+				5D050BE71959DEAD00D2447F /* UIColor+RandomColor.m in Sources */,
 				5DBDF21B18D5F2A2005B1E18 /* OLESimulatedTableView.m in Sources */,
 				5D2A88EB192246D700CEE791 /* SimpleTableViewController.m in Sources */,
 				5DBDF1F118D5F26B005B1E18 /* main.m in Sources */,
