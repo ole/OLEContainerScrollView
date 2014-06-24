@@ -13,9 +13,9 @@ Please read my [blog post about OLEContainerScrollView](http://oleb.net/blog/201
 To check out the demo app:
 
 1. Clone this repository.
-2. Run `pod install` inside the repository's directory to install the dependencies via [CocoaPods](http://cocoapods.org).
+2. Open `OLEContainerScrollViewDemo.xcodeproj` in Xcode.
 
-The demo app uses a class I have written named `SimulatedTableView` to illustrate how a `UITableView` reuses its cells. This class uses [Facebook's Pop library](https://github.com/facebook/pop) for animations.
+The demo app uses a class I have written named `OLESimulatedTableView` to illustrate how a `UITableView` reuses its cells.
 
 ## License
 
