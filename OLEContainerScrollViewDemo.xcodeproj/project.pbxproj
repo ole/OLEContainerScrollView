@@ -25,7 +25,7 @@
 		5DBDF20618D5F26B005B1E18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E818D5F26B005B1E18 /* UIKit.framework */; };
 		5DBDF20E18D5F26B005B1E18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5DBDF20C18D5F26B005B1E18 /* InfoPlist.strings */; };
 		5DBDF21018D5F26B005B1E18 /* OLEContainerScrollViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDF20F18D5F26B005B1E18 /* OLEContainerScrollViewDemoTests.m */; };
-		5DBDF21B18D5F2A2005B1E18 /* SimulatedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDF21A18D5F2A2005B1E18 /* SimulatedTableView.m */; };
+		5DBDF21B18D5F2A2005B1E18 /* OLESimulatedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDF21A18D5F2A2005B1E18 /* OLESimulatedTableView.m */; };
 		5DEAE59F192CF6A80075B6DE /* OLEContainerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEAE59E192CF6A80075B6DE /* OLEContainerScrollView.m */; };
 /* End PBXBuildFile section */
 
@@ -65,8 +65,8 @@
 		5DBDF20B18D5F26B005B1E18 /* OLEContainerScrollViewDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OLEContainerScrollViewDemoTests-Info.plist"; sourceTree = "<group>"; };
 		5DBDF20D18D5F26B005B1E18 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5DBDF20F18D5F26B005B1E18 /* OLEContainerScrollViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OLEContainerScrollViewDemoTests.m; sourceTree = "<group>"; };
-		5DBDF21918D5F2A2005B1E18 /* SimulatedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulatedTableView.h; sourceTree = "<group>"; };
-		5DBDF21A18D5F2A2005B1E18 /* SimulatedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimulatedTableView.m; sourceTree = "<group>"; };
+		5DBDF21918D5F2A2005B1E18 /* OLESimulatedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLESimulatedTableView.h; sourceTree = "<group>"; };
+		5DBDF21A18D5F2A2005B1E18 /* OLESimulatedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLESimulatedTableView.m; sourceTree = "<group>"; };
 		5DEAE59D192CF6A80075B6DE /* OLEContainerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLEContainerScrollView.h; sourceTree = "<group>"; };
 		5DEAE59E192CF6A80075B6DE /* OLEContainerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLEContainerScrollView.m; sourceTree = "<group>"; };
 		E5FA386E42C84E67A95B3693 /* Pods-OLEContainerScrollViewDemo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OLEContainerScrollViewDemo.xcconfig"; path = "Pods/Pods-OLEContainerScrollViewDemo.xcconfig"; sourceTree = "<group>"; };
@@ -117,8 +117,8 @@
 		5D56AD99192A2C9000C42405 /* Helper Views */ = {
 			isa = PBXGroup;
 			children = (
-				5DBDF21918D5F2A2005B1E18 /* SimulatedTableView.h */,
-				5DBDF21A18D5F2A2005B1E18 /* SimulatedTableView.m */,
+				5DBDF21918D5F2A2005B1E18 /* OLESimulatedTableView.h */,
+				5DBDF21A18D5F2A2005B1E18 /* OLESimulatedTableView.m */,
 				5D2A88E6191D1DC300CEE791 /* OLEBorderedView.h */,
 				5D2A88E7191D1DC300CEE791 /* OLEBorderedView.m */,
 			);
@@ -344,7 +344,7 @@
 				5D2A88E8191D1DC300CEE791 /* OLEBorderedView.m in Sources */,
 				5DBDF1F518D5F26B005B1E18 /* AppDelegate.m in Sources */,
 				5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */,
-				5DBDF21B18D5F2A2005B1E18 /* SimulatedTableView.m in Sources */,
+				5DBDF21B18D5F2A2005B1E18 /* OLESimulatedTableView.m in Sources */,
 				5D2A88EB192246D700CEE791 /* SimpleTableViewController.m in Sources */,
 				5DBDF1F118D5F26B005B1E18 /* main.m in Sources */,
 			);

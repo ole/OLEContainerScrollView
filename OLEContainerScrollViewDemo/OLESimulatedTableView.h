@@ -1,5 +1,5 @@
 //
-//  SimulatedTableView.h
+//  OLESimulatedTableView.h
 //  OLEContainerScrollViewDemo
 //
 //  Created by Ole Begemann on 16/03/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SimulatedTableView : UIScrollView
+@interface OLESimulatedTableView : UIScrollView
 
 - (instancetype)initWithNumberOfRows:(NSUInteger)numberOfRows rowHeight:(CGFloat)rowHeight edgeInsets:(UIEdgeInsets)edgeInsets cellSpacing:(CGFloat)cellSpacing;
 
