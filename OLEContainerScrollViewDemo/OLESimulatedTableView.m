@@ -8,7 +8,6 @@
 
 #import "OLESimulatedTableView.h"
 #import "OLEBorderedView.h"
-#import <POP/POP.h>
 
 typedef OLEBorderedView OLESimulatedTableViewCell;
 
