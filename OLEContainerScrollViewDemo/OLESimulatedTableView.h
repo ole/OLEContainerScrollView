@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  A view that can be used to illustrate how cell reuse works in UITableView.
+ *
+ *  It creates a scrollable list of dummy cells (with no content). Dashed outlines
+ *  represent cells that exist conceptually but do not get instantiated until they
+ *  are scrolled into the visible bounds of the table view.
+ *
+ *  When you place this view into your view hierarchy, you should give it a top and 
+ *  bottom margin in order to see how cells get added and removed during scrolling.
+ */
 @interface OLESimulatedTableView : UIScrollView
 
 - (instancetype)initWithNumberOfRows:(NSUInteger)numberOfRows rowHeight:(CGFloat)rowHeight edgeInsets:(UIEdgeInsets)edgeInsets cellSpacing:(CGFloat)cellSpacing;
