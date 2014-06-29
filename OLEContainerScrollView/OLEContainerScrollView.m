@@ -12,8 +12,15 @@
 
 @interface OLEContainerScrollView ()
 
-@property (nonatomic, readonly) UIView *contentView;
 @property (nonatomic, readonly) NSMutableArray *subviewsInLayoutOrder;
+
+- (void)didAddSubviewToContainer:(UIView *)subview;
+- (void)willRemoveSubviewFromContainer:(UIView *)subview;
+
+@end
+
+
+@interface OLEContainerScrollViewContentView : UIView
 
 @end
 
@@ -26,7 +33,7 @@ static void *KVOContext = &KVOContext;
 {
     // Removing the subviews will unregister KVO observers
     for (UIView *subview in self.contentView.subviews) {
-        [self removeSubviewFromContainer:subview];
+        [subview removeFromSuperview];
     }
 }
 
@@ -46,17 +53,16 @@ static void *KVOContext = &KVOContext;
 
 - (void)commonInitForOLEContainerScrollView
 {
-    _contentView = [[UIView alloc] initWithFrame:CGRectZero];
+    _contentView = [[OLEContainerScrollViewContentView alloc] initWithFrame:CGRectZero];
     [self addSubview:_contentView];
     _subviewsInLayoutOrder = [NSMutableArray arrayWithCapacity:4];
 }
 
 #pragma mark - Adding and removing subviews
 
-- (void)addSubviewToContainer:(UIView *)subview
+- (void)didAddSubviewToContainer:(UIView *)subview
 {
     NSParameterAssert(subview != nil);
-    [self.contentView addSubview:subview];
     [self.subviewsInLayoutOrder addObject:subview];
     
     if ([subview isKindOfClass:[UIScrollView class]]) {
@@ -71,7 +77,7 @@ static void *KVOContext = &KVOContext;
     [self setNeedsLayout];
 }
 
-- (void)removeSubviewFromContainer:(UIView *)subview
+- (void)willRemoveSubviewFromContainer:(UIView *)subview
 {
     NSParameterAssert(subview != nil);
     
@@ -81,19 +87,8 @@ static void *KVOContext = &KVOContext;
         [subview removeObserver:self forKeyPath:NSStringFromSelector(@selector(frame)) context:KVOContext];
         [subview removeObserver:self forKeyPath:NSStringFromSelector(@selector(bounds)) context:KVOContext];
     }
-    [subview removeFromSuperview];
     [self.subviewsInLayoutOrder removeObject:subview];
     [self setNeedsLayout];
-}
-
-- (void)bringSubviewToFront:(UIView *)view
-{
-    [self.contentView bringSubviewToFront:view];
-}
-
-- (void)sendSubviewToBack:(UIView *)view
-{
-    [self.contentView sendSubviewToBack:view];
 }
 
 #pragma mark - KVO
@@ -195,3 +190,27 @@ static void *KVOContext = &KVOContext;
 }
 
 @end
+
+#pragma mark - OLEContainerScrollViewContentView
+
+@implementation OLEContainerScrollViewContentView
+
+- (void)didAddSubview:(UIView *)subview
+{
+    [super didAddSubview:subview];
+    if ([self.superview isKindOfClass:[OLEContainerScrollView class]]) {
+        [(OLEContainerScrollView *)self.superview didAddSubviewToContainer:subview];
+    }
+}
+
+- (void)willRemoveSubview:(UIView *)subview
+{
+    [super willRemoveSubview:subview];
+    if ([self.superview isKindOfClass:[OLEContainerScrollView class]]) {
+        [(OLEContainerScrollView *)self.superview willRemoveSubviewFromContainer:subview];
+    }
+}
+
+@end
+
+
