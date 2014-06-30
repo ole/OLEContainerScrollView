@@ -10,8 +10,10 @@
 
 @interface OLEContainerScrollView : UIScrollView
 
-// Add your subviews to contentView; OLEContainerScrollView will lay
-// them out vertically in the order in which they were added.
+/// The container scroll views content view. You should add your subviews to this content view.
+/// Only views that are added to the content view will be managed by the container scroll view.
+/// The container scroll view will lay the content view's subviews out vertically in the order
+/// in which they were added.
 @property (nonatomic, readonly) UIView *contentView;
 
 @end
