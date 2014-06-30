@@ -10,7 +10,8 @@
 
 @interface OLEContainerScrollView : UIScrollView
 
-- (void)addSubviewToContainer:(UIView *)subview;
-- (void)removeSubviewFromContainer:(UIView *)subview;
+// Add your subviews to contentView; OLEContainerScrollView will lay
+// them out vertically in the order in which they were added.
+@property (nonatomic, readonly) UIView *contentView;
 
 @end
