@@ -36,7 +36,7 @@
         [self.collectionViews addObject:collectionView];
         [self.numberOfItemsPerCollectionView addObject:@(randomNumberOfItemsInCollectionView)];
         [self.cellColorPerCollectionView addObject:[UIColor randomColor]];
-        [self.containerScrollView addSubviewToContainer:collectionView];
+        [self.containerScrollView.contentView addSubview:collectionView];
     }
 }
 
