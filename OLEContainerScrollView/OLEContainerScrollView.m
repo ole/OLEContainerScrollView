@@ -186,7 +186,7 @@ static void *KVOContext = &KVOContext;
         }
     }
     
-    self.contentSize = CGSizeMake(self.bounds.size.width, fmax(yOffsetOfCurrentSubview, self.bounds.size.height));
+    self.contentSize = CGSizeMake(self.bounds.size.width, fmax(yOffsetOfCurrentSubview, self.bounds.size.height - (self.contentInset.top + self.contentInset.bottom)));
 }
 
 @end
