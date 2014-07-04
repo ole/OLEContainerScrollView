@@ -1,10 +1,9 @@
-//
-//  CustomContainerScrollViewController.m
-//  OLEContainerScrollViewDemo
-//
-//  Created by Ole Begemann on 16/03/14.
-//  Copyright (c) 2014 Ole Begemann. All rights reserved.
-//
+/*
+ OLEContainerScrollView
+ 
+ Copyright (c) 2014 Ole Begemann.
+ https://github.com/ole/OLEContainerScrollView
+ */
 
 #import "CustomContainerScrollViewController.h"
 #import "OLEContainerScrollView.h"

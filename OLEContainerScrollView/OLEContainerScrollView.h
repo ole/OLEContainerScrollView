@@ -1,10 +1,9 @@
-//
-//  OLEContainerScrollView.h
-//  ScrollView
-//
-//  Created by Ole Begemann on 26.09.13.
-//  Copyright (c) 2013 Ole Begemann. All rights reserved.
-//
+/*
+ OLEContainerScrollView
+ 
+ Copyright (c) 2014 Ole Begemann.
+ https://github.com/ole/OLEContainerScrollView
+ */
 
 @import UIKit;
 
