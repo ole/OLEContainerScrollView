@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Ole Begemann. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 /**
  *  A view that can be used to illustrate how cell reuse works in UITableView.
