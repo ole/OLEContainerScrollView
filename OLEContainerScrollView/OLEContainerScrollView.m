@@ -186,7 +186,11 @@ static void *KVOContext = &KVOContext;
         }
     }
     
-    self.contentSize = CGSizeMake(self.bounds.size.width, fmax(yOffsetOfCurrentSubview, self.bounds.size.height - (self.contentInset.top + self.contentInset.bottom)));
+    // If our content is shorter than our bounds height, take the contentInset into account to avoid
+    // scrolling when it is not needed.
+    CGFloat minimumContentHeight = self.bounds.size.height - (self.contentInset.top + self.contentInset.bottom);
+
+    self.contentSize = CGSizeMake(self.bounds.size.width, fmax(yOffsetOfCurrentSubview, minimumContentHeight));
 }
 
 @end
