@@ -47,6 +47,7 @@ static void *KVOContext = &KVOContext;
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     [self commonInitForOLEContainerScrollView];
 }
 
