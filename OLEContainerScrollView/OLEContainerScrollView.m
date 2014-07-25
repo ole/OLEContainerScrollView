@@ -10,6 +10,7 @@
 #import "OLEContainerScrollView.h"
 #import "OLEContainerScrollView_Private.h"
 #import "OLEContainerScrollViewContentView.h"
+#import "OLEContainerScrollView+Swizzling.h"
 
 @interface OLEContainerScrollView ()
 
@@ -20,7 +21,15 @@
 
 @implementation OLEContainerScrollView
 
-static void *KVOContext = &KVOContext;
++ (void)initialize
+{
+    // +initialize can be called multiple times if subclasses don't implement it.
+    // Protect against multiple calls
+    if (self == [OLEContainerScrollView self]) {
+        swizzleUICollectionViewLayoutFinalizeCollectionViewUpdates();
+        swizzleUITableView();
+    }
+}
 
 - (void)dealloc
 {
@@ -87,6 +96,8 @@ static void *KVOContext = &KVOContext;
 
 #pragma mark - KVO
 
+static void *KVOContext = &KVOContext;
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if (context == KVOContext) {
@@ -97,6 +108,7 @@ static void *KVOContext = &KVOContext;
             CGSize newContentSize = scrollView.contentSize;
             if (!CGSizeEqualToSize(newContentSize, oldContentSize)) {
                 [self setNeedsLayout];
+                [self layoutIfNeeded];
             }
         } else if ([keyPath isEqualToString:NSStringFromSelector(@selector(frame))] ||
                    [keyPath isEqualToString:NSStringFromSelector(@selector(bounds))]) {
@@ -105,6 +117,7 @@ static void *KVOContext = &KVOContext;
             CGRect newFrame = subview.frame;
             if (!CGRectEqualToRect(newFrame, oldFrame)) {
                 [self setNeedsLayout];
+                [self layoutIfNeeded];
             }
         }
     } else {

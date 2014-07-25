@@ -12,6 +12,8 @@
 		5D2A88E8191D1DC300CEE791 /* OLEBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A88E7191D1DC300CEE791 /* OLEBorderedView.m */; };
 		5D2A88EB192246D700CEE791 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A88EA192246D700CEE791 /* SimpleTableViewController.m */; };
 		5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D63B222192250990064DB38 /* NaiveContainerScrollViewController.m */; };
+		5D8CFD6E19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CFD6D19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m */; };
+		5D8CFD7419815DA800B3B7F7 /* OLESwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CFD7319815DA800B3B7F7 /* OLESwizzling.m */; };
 		5D8CFD7719815E5300B3B7F7 /* OLEContainerScrollViewContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CFD7619815E5300B3B7F7 /* OLEContainerScrollViewContentView.m */; };
 		5D8CFD7B1981729D00B3B7F7 /* MultipleTableViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CFD7A1981729D00B3B7F7 /* MultipleTableViewsViewController.m */; };
 		5DBDF1E518D5F26B005B1E18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E418D5F26B005B1E18 /* Foundation.framework */; };
@@ -53,6 +55,10 @@
 		5D2A88EA192246D700CEE791 /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
 		5D63B221192250990064DB38 /* NaiveContainerScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaiveContainerScrollViewController.h; sourceTree = "<group>"; };
 		5D63B222192250990064DB38 /* NaiveContainerScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaiveContainerScrollViewController.m; sourceTree = "<group>"; };
+		5D8CFD6C19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OLEContainerScrollView+Swizzling.h"; sourceTree = "<group>"; };
+		5D8CFD6D19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OLEContainerScrollView+Swizzling.m"; sourceTree = "<group>"; };
+		5D8CFD7219815DA800B3B7F7 /* OLESwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLESwizzling.h; sourceTree = "<group>"; };
+		5D8CFD7319815DA800B3B7F7 /* OLESwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLESwizzling.m; sourceTree = "<group>"; };
 		5D8CFD7519815E5300B3B7F7 /* OLEContainerScrollViewContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLEContainerScrollViewContentView.h; sourceTree = "<group>"; };
 		5D8CFD7619815E5300B3B7F7 /* OLEContainerScrollViewContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLEContainerScrollViewContentView.m; sourceTree = "<group>"; };
 		5D8CFD781981623200B3B7F7 /* OLEContainerScrollView_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLEContainerScrollView_Private.h; sourceTree = "<group>"; };
@@ -219,6 +225,10 @@
 				5D8CFD781981623200B3B7F7 /* OLEContainerScrollView_Private.h */,
 				5D8CFD7519815E5300B3B7F7 /* OLEContainerScrollViewContentView.h */,
 				5D8CFD7619815E5300B3B7F7 /* OLEContainerScrollViewContentView.m */,
+				5D8CFD6C19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.h */,
+				5D8CFD6D19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m */,
+				5D8CFD7219815DA800B3B7F7 /* OLESwizzling.h */,
+				5D8CFD7319815DA800B3B7F7 /* OLESwizzling.m */,
 			);
 			path = OLEContainerScrollView;
 			sourceTree = "<group>";
@@ -328,6 +338,8 @@
 				5DBDF1F518D5F26B005B1E18 /* AppDelegate.m in Sources */,
 				5D8CFD7719815E5300B3B7F7 /* OLEContainerScrollViewContentView.m in Sources */,
 				5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */,
+				5D8CFD7419815DA800B3B7F7 /* OLESwizzling.m in Sources */,
+				5D8CFD6E19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m in Sources */,
 				5D050BE71959DEAD00D2447F /* UIColor+RandomColor.m in Sources */,
 				5DBDF21B18D5F2A2005B1E18 /* OLESimulatedTableView.m in Sources */,
 				5D2A88EB192246D700CEE791 /* SimpleTableViewController.m in Sources */,
