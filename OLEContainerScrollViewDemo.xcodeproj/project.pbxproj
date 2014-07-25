@@ -13,6 +13,7 @@
 		5D2A88EB192246D700CEE791 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A88EA192246D700CEE791 /* SimpleTableViewController.m */; };
 		5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D63B222192250990064DB38 /* NaiveContainerScrollViewController.m */; };
 		5D8CFD7719815E5300B3B7F7 /* OLEContainerScrollViewContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CFD7619815E5300B3B7F7 /* OLEContainerScrollViewContentView.m */; };
+		5D8CFD7B1981729D00B3B7F7 /* MultipleTableViewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CFD7A1981729D00B3B7F7 /* MultipleTableViewsViewController.m */; };
 		5DBDF1E518D5F26B005B1E18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E418D5F26B005B1E18 /* Foundation.framework */; };
 		5DBDF1E718D5F26B005B1E18 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E618D5F26B005B1E18 /* CoreGraphics.framework */; };
 		5DBDF1E918D5F26B005B1E18 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DBDF1E818D5F26B005B1E18 /* UIKit.framework */; };
@@ -55,6 +56,8 @@
 		5D8CFD7519815E5300B3B7F7 /* OLEContainerScrollViewContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLEContainerScrollViewContentView.h; sourceTree = "<group>"; };
 		5D8CFD7619815E5300B3B7F7 /* OLEContainerScrollViewContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLEContainerScrollViewContentView.m; sourceTree = "<group>"; };
 		5D8CFD781981623200B3B7F7 /* OLEContainerScrollView_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OLEContainerScrollView_Private.h; sourceTree = "<group>"; };
+		5D8CFD791981729D00B3B7F7 /* MultipleTableViewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultipleTableViewsViewController.h; sourceTree = "<group>"; };
+		5D8CFD7A1981729D00B3B7F7 /* MultipleTableViewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleTableViewsViewController.m; sourceTree = "<group>"; };
 		5DBDF1E118D5F26B005B1E18 /* OLEContainerScrollViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OLEContainerScrollViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBDF1E418D5F26B005B1E18 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5DBDF1E618D5F26B005B1E18 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -118,6 +121,8 @@
 				5DBDF1FA18D5F26B005B1E18 /* CustomContainerScrollViewController.m */,
 				5D050BE21959D8F200D2447F /* MultipleCollectionsViewController.h */,
 				5D050BE31959D8F200D2447F /* MultipleCollectionsViewController.m */,
+				5D8CFD791981729D00B3B7F7 /* MultipleTableViewsViewController.h */,
+				5D8CFD7A1981729D00B3B7F7 /* MultipleTableViewsViewController.m */,
 			);
 			name = "Demo App";
 			sourceTree = "<group>";
@@ -319,6 +324,7 @@
 				5DBDF1FB18D5F26B005B1E18 /* CustomContainerScrollViewController.m in Sources */,
 				5D050BE41959D8F200D2447F /* MultipleCollectionsViewController.m in Sources */,
 				5D2A88E8191D1DC300CEE791 /* OLEBorderedView.m in Sources */,
+				5D8CFD7B1981729D00B3B7F7 /* MultipleTableViewsViewController.m in Sources */,
 				5DBDF1F518D5F26B005B1E18 /* AppDelegate.m in Sources */,
 				5D8CFD7719815E5300B3B7F7 /* OLEContainerScrollViewContentView.m in Sources */,
 				5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */,
