@@ -53,12 +53,11 @@ void swizzleUITableView()
 
         [UIView animateWithDuration:0.25 animations:^{
 
-            // Manually set the collection view's contentSize to its new size (after the updates have been performed) to cause
+            // Manually set the table view's contentSize to its new size (after the updates have been performed) to cause
             // a relayout of all views in the container scroll view.
-            // We do this to animate the resizing of the collection view and its adjacent views in the container scroll view
-            // in sync with the cell update animations (finalizeCollectionViewUpdates is called inside the animation block).
-            // If we don't do this, the collection view will set its new content size only after the cell update animations
-            // have finished, which is too late for us.
+            // We do this to animate the resizing of the tabke view and its adjacent views in the container scroll view
+            // in sync with the cell update animations. If we don't do this, the table view will set its new content size
+            // only after the cell update animations have finished, which is too late for us.
             BOOL tableViewIsInsideOLEContainerScrollView = [_self.superview isKindOfClass:[OLEContainerScrollViewContentView class]];
             if (tableViewIsInsideOLEContainerScrollView) {
                 NSString *obfuscatedPropertyKey = [NSString stringWithFormat:@"_%@entSize", @"cont"];
