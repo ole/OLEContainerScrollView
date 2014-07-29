@@ -36,10 +36,6 @@ void swizzleUICollectionViewLayoutFinalizeCollectionViewUpdates()
     });
 }
 
-@interface UITableView (Swizzling)
-- (void)_endCellAnimationsWithContext:(id)context;
-@end
-
 void swizzleUITableView()
 {
     Class classToSwizzle = [UITableView class];
