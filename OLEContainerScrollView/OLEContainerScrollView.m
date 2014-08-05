@@ -180,7 +180,7 @@ static void *KVOContext = &KVOContext;
             scrollView.frame = frame;
             scrollView.contentOffset = contentOffset;
 
-            yOffsetOfCurrentSubview += scrollView.contentSize.height;
+            yOffsetOfCurrentSubview += scrollView.contentSize.height + scrollView.contentInset.top + scrollView.contentInset.bottom;
         }
         else {
             // Normal views are simply positioned at the current offset
