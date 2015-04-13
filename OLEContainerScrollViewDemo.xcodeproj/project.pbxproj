@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5D050BE41959D8F200D2447F /* MultipleCollectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D050BE31959D8F200D2447F /* MultipleCollectionsViewController.m */; };
 		5D050BE71959DEAD00D2447F /* UIColor+RandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D050BE61959DEAD00D2447F /* UIColor+RandomColor.m */; };
+		5D06E4831ADC21D300E08F02 /* SingleViewsContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D06E4821ADC21D300E08F02 /* SingleViewsContainerViewController.m */; };
+		5D06E4851ADC237800E08F02 /* ChildView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D06E4841ADC237800E08F02 /* ChildView.xib */; };
 		5D2A88E8191D1DC300CEE791 /* OLEBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A88E7191D1DC300CEE791 /* OLEBorderedView.m */; };
 		5D2A88EB192246D700CEE791 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A88EA192246D700CEE791 /* SimpleTableViewController.m */; };
 		5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D63B222192250990064DB38 /* NaiveContainerScrollViewController.m */; };
@@ -34,6 +36,9 @@
 		5D050BE31959D8F200D2447F /* MultipleCollectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleCollectionsViewController.m; sourceTree = "<group>"; };
 		5D050BE51959DEAD00D2447F /* UIColor+RandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RandomColor.h"; sourceTree = "<group>"; };
 		5D050BE61959DEAD00D2447F /* UIColor+RandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RandomColor.m"; sourceTree = "<group>"; };
+		5D06E4811ADC21D300E08F02 /* SingleViewsContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleViewsContainerViewController.h; sourceTree = "<group>"; };
+		5D06E4821ADC21D300E08F02 /* SingleViewsContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleViewsContainerViewController.m; sourceTree = "<group>"; };
+		5D06E4841ADC237800E08F02 /* ChildView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildView.xib; sourceTree = "<group>"; };
 		5D2A88E6191D1DC300CEE791 /* OLEBorderedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLEBorderedView.h; sourceTree = "<group>"; };
 		5D2A88E7191D1DC300CEE791 /* OLEBorderedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLEBorderedView.m; sourceTree = "<group>"; };
 		5D2A88E9192246D700CEE791 /* SimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTableViewController.h; sourceTree = "<group>"; };
@@ -100,6 +105,9 @@
 				5D050BE31959D8F200D2447F /* MultipleCollectionsViewController.m */,
 				5D8CFD791981729D00B3B7F7 /* MultipleTableViewsViewController.h */,
 				5D8CFD7A1981729D00B3B7F7 /* MultipleTableViewsViewController.m */,
+				5D06E4811ADC21D300E08F02 /* SingleViewsContainerViewController.h */,
+				5D06E4821ADC21D300E08F02 /* SingleViewsContainerViewController.m */,
+				5D06E4841ADC237800E08F02 /* ChildView.xib */,
 			);
 			name = "Demo App";
 			sourceTree = "<group>";
@@ -237,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DBDF1FD18D5F26B005B1E18 /* Images.xcassets in Resources */,
+				5D06E4851ADC237800E08F02 /* ChildView.xib in Resources */,
 				5DBDF1EF18D5F26B005B1E18 /* InfoPlist.strings in Resources */,
 				5DBDF1F818D5F26B005B1E18 /* Main.storyboard in Resources */,
 			);
@@ -256,6 +265,7 @@
 				5D8CFD7B1981729D00B3B7F7 /* MultipleTableViewsViewController.m in Sources */,
 				5DBDF1F518D5F26B005B1E18 /* AppDelegate.m in Sources */,
 				5D8CFD7719815E5300B3B7F7 /* OLEContainerScrollViewContentView.m in Sources */,
+				5D06E4831ADC21D300E08F02 /* SingleViewsContainerViewController.m in Sources */,
 				5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */,
 				5D8CFD7419815DA800B3B7F7 /* OLESwizzling.m in Sources */,
 				5D8CFD6E19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m in Sources */,
