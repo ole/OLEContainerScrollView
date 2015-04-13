@@ -66,8 +66,12 @@
 - (void)didAddSubviewToContainer:(UIView *)subview
 {
     NSParameterAssert(subview != nil);
+
+    subview.autoresizingMask = UIViewAutoresizingNone;
+    subview.translatesAutoresizingMaskIntoConstraints = NO;
+
     [self.subviewsInLayoutOrder addObject:subview];
-    
+
     if ([subview isKindOfClass:[UIScrollView class]]) {
         UIScrollView *scrollView = (UIScrollView *)subview;
         scrollView.scrollEnabled = NO;
