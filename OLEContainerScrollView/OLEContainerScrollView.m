@@ -201,7 +201,14 @@ static void *KVOContext = &KVOContext;
     // scrolling when it is not needed.
     CGFloat minimumContentHeight = self.bounds.size.height - (self.contentInset.top + self.contentInset.bottom);
 
+    CGPoint initialContentOffset = self.contentOffset;
     self.contentSize = CGSizeMake(self.bounds.size.width, fmax(yOffsetOfCurrentSubview, minimumContentHeight));
+    
+    // If contentOffset changes after contentSize change, we need to trigger layout update one more time.
+    if (!CGPointEqualToPoint(initialContentOffset, self.contentOffset)) {
+        [self setNeedsLayout];
+        [self layoutIfNeeded];
+    }
 }
 
 @end
