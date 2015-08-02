@@ -17,6 +17,14 @@ To check out the demo app:
 
 The demo app uses a class I have written named `OLESimulatedTableView` to illustrate how a `UITableView` reuses its cells.
 
+## Usage
+
+1. Manually clone this repository to your machine or add it as a Git submodule to your project.
+2. Drag the folder `OLEContainerScrollView` into your Xcode project to add all the files in it to your project.
+3. `#import "OLEContainerScrollView.h"`
+4. Create an `OLEContainerScrollView` instead of a regular `UIScrollView`.
+5. Add subviews (like table views, collection views, regular scroll views, or just other regular views) to the scroll view’s `contentView`. Check out the comments in `OLEContainerScrollView.h`.
+
 ## License
 
 Published under the MIT License. See the `LICENSE` file for details.
