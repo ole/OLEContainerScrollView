@@ -5,6 +5,7 @@
  https://github.com/ole/OLEContainerScrollView
  */
 
+@import Foundation;
 #import "OLESwizzling.h"
 
 // Adapted from Peter Steinberger's PSPDFReplaceMethodWithBlock
