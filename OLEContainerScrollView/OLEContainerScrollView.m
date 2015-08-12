@@ -136,7 +136,7 @@ static void *KVOContext = &KVOContext;
     [super layoutSubviews];
     
     // Translate the container view's content offset to contentView bounds.
-    // This keeps the contentview always centered on the visible portion of the container view's
+    // This keeps the contentView always centered on the visible portion of the container view's
     // full content size, and avoids the need to make the contentView large enough to fit the
     // container view's full content size.
     self.contentView.frame = self.bounds;
