@@ -180,7 +180,8 @@ static void *KVOContext = &KVOContext;
             CGFloat remainingContentHeight = fmax(scrollView.contentSize.height - contentOffset.y, 0.0);
             frame.size.height = fmin(remainingBoundsHeight, remainingContentHeight);
             frame.size.width = self.contentView.bounds.size.width;
-            
+            frame.origin.x = 0;
+
             scrollView.frame = frame;
             scrollView.contentOffset = contentOffset;
 
@@ -189,6 +190,7 @@ static void *KVOContext = &KVOContext;
         else {
             // Normal views are simply positioned at the current offset
             CGRect frame = subview.frame;
+            frame.origin.x = 0;
             frame.origin.y = yOffsetOfCurrentSubview;
             frame.size.width = self.contentView.bounds.size.width;
             subview.frame = frame;
