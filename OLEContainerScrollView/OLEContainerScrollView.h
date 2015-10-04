@@ -5,7 +5,7 @@
  https://github.com/ole/OLEContainerScrollView
  */
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 /**
  A container scroll view that allows you to place multiple views (including scroll views, table views and collection views) in a stacked layout.
