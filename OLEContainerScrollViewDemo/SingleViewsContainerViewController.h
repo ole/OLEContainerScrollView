@@ -1,10 +1,9 @@
-//
-//  SingleViewsContainerViewController.h
-//  OLEContainerScrollViewDemo
-//
-//  Created by Ole Begemann on 13/04/15.
-//  Copyright (c) 2015 Ole Begemann. All rights reserved.
-//
+/*
+ OLEContainerScrollView
+
+ Copyright (c) 2014 Ole Begemann.
+ https://github.com/ole/OLEContainerScrollView
+ */
 
 @import UIKit;
 
