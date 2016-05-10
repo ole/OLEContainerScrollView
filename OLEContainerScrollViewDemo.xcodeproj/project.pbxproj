@@ -218,7 +218,7 @@
 		5DBDF1D918D5F26B005B1E18 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Ole Begemann";
 			};
 			buildConfigurationList = 5DBDF1DC18D5F26B005B1E18 /* Build configuration list for PBXProject "OLEContainerScrollViewDemo" */;
@@ -316,6 +316,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -388,6 +389,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OLEContainerScrollViewDemo/OLEContainerScrollViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "OLEContainerScrollViewDemo/OLEContainerScrollViewDemo-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olebegemann.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = OLEContainerScrollViewDemo;
 				WRAPPER_EXTENSION = app;
 			};
@@ -401,6 +403,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OLEContainerScrollViewDemo/OLEContainerScrollViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "OLEContainerScrollViewDemo/OLEContainerScrollViewDemo-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.olebegemann.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = OLEContainerScrollViewDemo;
 				WRAPPER_EXTENSION = app;
 			};
