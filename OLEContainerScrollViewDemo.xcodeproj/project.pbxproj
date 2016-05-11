@@ -14,6 +14,8 @@
 		5D2A88E8191D1DC300CEE791 /* OLEBorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A88E7191D1DC300CEE791 /* OLEBorderedView.m */; };
 		5D2A88EB192246D700CEE791 /* SimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2A88EA192246D700CEE791 /* SimpleTableViewController.m */; };
 		5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D63B222192250990064DB38 /* NaiveContainerScrollViewController.m */; };
+		5D6E3C5B1CE1F5FD00DAD7CE /* SingleViewsUsingAutolayoutContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6E3C5A1CE1F5FD00DAD7CE /* SingleViewsUsingAutolayoutContainerViewController.m */; };
+		5D6E3C5E1CE1F7E900DAD7CE /* ChildViewUsingAutolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6E3C5D1CE1F7E900DAD7CE /* ChildViewUsingAutolayout.m */; };
 		5D8CFD6E19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CFD6D19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m */; };
 		5D8CFD7419815DA800B3B7F7 /* OLESwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CFD7319815DA800B3B7F7 /* OLESwizzling.m */; };
 		5D8CFD7719815E5300B3B7F7 /* OLEContainerScrollViewContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8CFD7619815E5300B3B7F7 /* OLEContainerScrollViewContentView.m */; };
@@ -28,6 +30,7 @@
 		5DBDF1FB18D5F26B005B1E18 /* CustomContainerScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDF1FA18D5F26B005B1E18 /* CustomContainerScrollViewController.m */; };
 		5DBDF1FD18D5F26B005B1E18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DBDF1FC18D5F26B005B1E18 /* Images.xcassets */; };
 		5DBDF21B18D5F2A2005B1E18 /* OLESimulatedTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBDF21A18D5F2A2005B1E18 /* OLESimulatedTableView.m */; };
+		5DD430131CE1F40C00989D11 /* ChildViewUsingAutolayout.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DD430121CE1F40C00989D11 /* ChildViewUsingAutolayout.xib */; };
 		5DEAE59F192CF6A80075B6DE /* OLEContainerScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEAE59E192CF6A80075B6DE /* OLEContainerScrollView.m */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,10 @@
 		5D2A88EA192246D700CEE791 /* SimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTableViewController.m; sourceTree = "<group>"; };
 		5D63B221192250990064DB38 /* NaiveContainerScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaiveContainerScrollViewController.h; sourceTree = "<group>"; };
 		5D63B222192250990064DB38 /* NaiveContainerScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaiveContainerScrollViewController.m; sourceTree = "<group>"; };
+		5D6E3C591CE1F5FD00DAD7CE /* SingleViewsUsingAutolayoutContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleViewsUsingAutolayoutContainerViewController.h; sourceTree = "<group>"; };
+		5D6E3C5A1CE1F5FD00DAD7CE /* SingleViewsUsingAutolayoutContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleViewsUsingAutolayoutContainerViewController.m; sourceTree = "<group>"; };
+		5D6E3C5C1CE1F7E900DAD7CE /* ChildViewUsingAutolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildViewUsingAutolayout.h; sourceTree = "<group>"; };
+		5D6E3C5D1CE1F7E900DAD7CE /* ChildViewUsingAutolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildViewUsingAutolayout.m; sourceTree = "<group>"; };
 		5D8CFD6C19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OLEContainerScrollView+Swizzling.h"; sourceTree = "<group>"; };
 		5D8CFD6D19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OLEContainerScrollView+Swizzling.m"; sourceTree = "<group>"; };
 		5D8CFD7219815DA800B3B7F7 /* OLESwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLESwizzling.h; sourceTree = "<group>"; };
@@ -71,6 +78,7 @@
 		5DBDF20318D5F26B005B1E18 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5DBDF21918D5F2A2005B1E18 /* OLESimulatedTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLESimulatedTableView.h; sourceTree = "<group>"; };
 		5DBDF21A18D5F2A2005B1E18 /* OLESimulatedTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLESimulatedTableView.m; sourceTree = "<group>"; };
+		5DD430121CE1F40C00989D11 /* ChildViewUsingAutolayout.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildViewUsingAutolayout.xib; sourceTree = "<group>"; };
 		5DEAE59D192CF6A80075B6DE /* OLEContainerScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLEContainerScrollView.h; sourceTree = "<group>"; };
 		5DEAE59E192CF6A80075B6DE /* OLEContainerScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLEContainerScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +115,12 @@
 				5D8CFD7A1981729D00B3B7F7 /* MultipleTableViewsViewController.m */,
 				5D06E4811ADC21D300E08F02 /* SingleViewsContainerViewController.h */,
 				5D06E4821ADC21D300E08F02 /* SingleViewsContainerViewController.m */,
+				5D6E3C591CE1F5FD00DAD7CE /* SingleViewsUsingAutolayoutContainerViewController.h */,
+				5D6E3C5A1CE1F5FD00DAD7CE /* SingleViewsUsingAutolayoutContainerViewController.m */,
+				5D6E3C5C1CE1F7E900DAD7CE /* ChildViewUsingAutolayout.h */,
+				5D6E3C5D1CE1F7E900DAD7CE /* ChildViewUsingAutolayout.m */,
 				5D06E4841ADC237800E08F02 /* ChildView.xib */,
+				5DD430121CE1F40C00989D11 /* ChildViewUsingAutolayout.xib */,
 			);
 			name = "Demo App";
 			sourceTree = "<group>";
@@ -245,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DBDF1FD18D5F26B005B1E18 /* Images.xcassets in Resources */,
+				5DD430131CE1F40C00989D11 /* ChildViewUsingAutolayout.xib in Resources */,
 				5D06E4851ADC237800E08F02 /* ChildView.xib in Resources */,
 				5DBDF1EF18D5F26B005B1E18 /* InfoPlist.strings in Resources */,
 				5DBDF1F818D5F26B005B1E18 /* Main.storyboard in Resources */,
@@ -267,10 +281,12 @@
 				5D8CFD7719815E5300B3B7F7 /* OLEContainerScrollViewContentView.m in Sources */,
 				5D06E4831ADC21D300E08F02 /* SingleViewsContainerViewController.m in Sources */,
 				5D63B223192250990064DB38 /* NaiveContainerScrollViewController.m in Sources */,
+				5D6E3C5E1CE1F7E900DAD7CE /* ChildViewUsingAutolayout.m in Sources */,
 				5D8CFD7419815DA800B3B7F7 /* OLESwizzling.m in Sources */,
 				5D8CFD6E19815CE500B3B7F7 /* OLEContainerScrollView+Swizzling.m in Sources */,
 				5D050BE71959DEAD00D2447F /* UIColor+RandomColor.m in Sources */,
 				5DBDF21B18D5F2A2005B1E18 /* OLESimulatedTableView.m in Sources */,
+				5D6E3C5B1CE1F5FD00DAD7CE /* SingleViewsUsingAutolayoutContainerViewController.m in Sources */,
 				5D2A88EB192246D700CEE791 /* SimpleTableViewController.m in Sources */,
 				5DBDF1F118D5F26B005B1E18 /* main.m in Sources */,
 			);
