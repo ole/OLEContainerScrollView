@@ -72,7 +72,6 @@
     NSParameterAssert(subview != nil);
 
     subview.autoresizingMask = UIViewAutoresizingNone;
-    subview.translatesAutoresizingMaskIntoConstraints = NO;
 
     [self.subviewsInLayoutOrder addObject:subview];
 
