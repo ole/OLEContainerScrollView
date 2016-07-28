@@ -29,7 +29,13 @@ void swizzleUICollectionViewLayoutFinalizeCollectionViewUpdates()
         // If we don't do this, the collection view will set its new content size only after the cell update animations
         // have finished, which is too late for us.
         UICollectionView *collectionView = _self.collectionView;
-        BOOL collectionViewIsInsideOLEContainerScrollView = [collectionView.superview isKindOfClass:[OLEContainerScrollViewContentView class]];
+
+        // In the case of a wrapped collection (case 2 in -[OLEContainerScrollView layoutSubviews]),
+        // we need to check up one extra level
+        BOOL collectionViewIsInsideOLEContainerScrollView =
+            [collectionView.superview isKindOfClass:[OLEContainerScrollViewContentView class]]
+            || [collectionView.superview.superview isKindOfClass:[OLEContainerScrollViewContentView class]];
+
         if (collectionViewIsInsideOLEContainerScrollView) {
             collectionView.contentSize = _self.collectionViewContentSize;
         }
