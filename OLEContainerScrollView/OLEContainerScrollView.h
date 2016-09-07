@@ -30,12 +30,20 @@
  
  See the accompanying blog post, [Scroll Views Inside Scroll Views](http://oleb.net/blog/2014/05/scrollviews-inside-scrollviews/), for more information.
  */
+
+typedef NS_OPTIONS(NSUInteger, OLEContainerScrollViewOptions) {
+	OLEContainerScrollViewOptionExpandToFillVerticalSpace = 1 << 0
+};
+
 @interface OLEContainerScrollView : UIScrollView
+@property (nonatomic, assign) OLEContainerScrollViewOptions options;
 
 /** @name Managing Subviews */
 /**
  The container scroll view's content view. You should add your subviews to this content view. Only views that are added to the content view will be managed by the container scroll view. The container scroll view will lay the content view's subviews out vertically in the order in which they were added.
  */
 @property (nonatomic, readonly) UIView *contentView;
+
+- (id)initWithFrame:(CGRect)frame options:(OLEContainerScrollViewOptions)options;
 
 @end
