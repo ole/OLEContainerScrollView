@@ -43,18 +43,13 @@
     }
 }
 
-- (id)initWithFrame:(CGRect)frame options:(OLEContainerScrollViewOptions)options
+- (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-		self.options = options;
         [self commonInitForOLEContainerScrollView];
     }
     return self;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame {
-	return [self initWithFrame:frame options:0];
 }
 
 - (void)awakeFromNib
@@ -210,21 +205,9 @@ static void *KVOContext = &KVOContext;
             // content height is smaller than the height of the screen, adjust the frame height accordingly.
             CGFloat remainingBoundsHeight = fmax(CGRectGetMaxY(self.bounds) - CGRectGetMinY(frame), 0.0);
             CGFloat remainingContentHeight = fmax(scrollView.contentSize.height - contentOffset.y, 0.0);
-
-			frame.origin.x = 0;
-			frame.size.width = self.contentView.bounds.size.width;
-
-			if (
-				self.options & OLEContainerScrollViewOptionExpandToFillVerticalSpace &&
-				subview == self.subviewsInLayoutOrder.lastObject
-				)
-			{
-				// If this is the *last* subview, default to filling the available space
-				frame.size.height = fmax(remainingBoundsHeight, remainingContentHeight);
-			} else {
-				// Default
-				frame.size.height = fmin(remainingBoundsHeight, remainingContentHeight);
-			}
+            frame.size.height = fmin(remainingBoundsHeight, remainingContentHeight);
+            frame.size.width = self.contentView.bounds.size.width;
+            frame.origin.x = 0;
 
             scrollView.frame = frame;
             scrollView.contentOffset = contentOffset;
