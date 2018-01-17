@@ -12,6 +12,10 @@
 #import "OLEContainerScrollViewContentView.h"
 #import "OLEContainerScrollView+Swizzling.h"
 
+@interface UIView (WrappedView)
+@property (nonatomic, readonly, nullable) UIScrollView *ole_wrappedScrollView;
+@end
+
 @interface OLEContainerScrollView ()
 
 @property (nonatomic, readonly) NSMutableArray *subviewsInLayoutOrder;
@@ -71,8 +75,8 @@
 
     [self.subviewsInLayoutOrder addObject:subview];
 
-    if ([subview isKindOfClass:[UIScrollView class]]) {
-        UIScrollView *scrollView = (UIScrollView *)subview;
+    UIScrollView *scrollView = subview.ole_wrappedScrollView;
+    if (scrollView) {
         scrollView.scrollEnabled = NO;
         [scrollView addObserver:self forKeyPath:NSStringFromSelector(@selector(contentSize)) options:NSKeyValueObservingOptionOld context:KVOContext];
     } else {
@@ -86,9 +90,10 @@
 - (void)willRemoveSubviewFromContainer:(UIView *)subview
 {
     NSParameterAssert(subview != nil);
-    
-    if ([subview isKindOfClass:[UIScrollView class]]) {
-        [subview removeObserver:self forKeyPath:NSStringFromSelector(@selector(contentSize)) context:KVOContext];
+
+    UIScrollView *scrollView = subview.ole_wrappedScrollView;
+    if (scrollView) {
+        [scrollView removeObserver:self forKeyPath:NSStringFromSelector(@selector(contentSize)) context:KVOContext];
     } else {
         [subview removeObserver:self forKeyPath:NSStringFromSelector(@selector(frame)) context:KVOContext];
         [subview removeObserver:self forKeyPath:NSStringFromSelector(@selector(bounds)) context:KVOContext];
@@ -149,8 +154,31 @@ static void *KVOContext = &KVOContext;
     
     for (UIView *subview in self.subviewsInLayoutOrder)
     {
+        // Handle 3 types
+        // 1. Directly contained ScrollViews - main original case
+        // 2. Wrapped collections, ie. UITable/Collection(controller). New case:
+        //		* Layout scroll view as if *directly* contained (1.)
+        //		* Wrapper frame = scroll view frame
+        //		* Scroll view origin = {0, 0}
+        // 3. Normal views: Easy - just layout with fixed height
+
+        UIScrollView *scrollView = nil;
+        BOOL isCollectionContainerView = NO;
+
         if ([subview isKindOfClass:[UIScrollView class]]) {
-            UIScrollView *scrollView = (UIScrollView *)subview;
+            // 1. Direct scrollview
+            scrollView = subview;
+
+        } else if (subview.ole_wrappedScrollView) {
+            // 2. Wrapped collection
+            scrollView = subview.ole_wrappedScrollView;
+            subview.autoresizesSubviews = NO;
+            isCollectionContainerView = YES;
+        }
+        // otherwise case 3.
+
+        if (scrollView)
+        {
             CGRect frame = scrollView.frame;
             CGPoint contentOffset = scrollView.contentOffset;
 
@@ -179,15 +207,23 @@ static void *KVOContext = &KVOContext;
             CGFloat remainingContentHeight = fmax(scrollView.contentSize.height - contentOffset.y, 0.0);
             frame.size.height = fmin(remainingBoundsHeight, remainingContentHeight);
             frame.size.width = self.contentView.bounds.size.width;
-            
+            frame.origin.x = 0;
+
             scrollView.frame = frame;
             scrollView.contentOffset = contentOffset;
 
             yOffsetOfCurrentSubview += scrollView.contentSize.height + scrollView.contentInset.top + scrollView.contentInset.bottom;
+
+            // if we're dealing with a wrapped scroll view, adjust the container and scroll view origin
+            if (isCollectionContainerView) {
+                subview.frame = frame;
+                scrollView.frame = (CGRect) { CGPointZero, frame.size };
+            }
         }
         else {
             // Normal views are simply positioned at the current offset
             CGRect frame = subview.frame;
+            frame.origin.x = 0;
             frame.origin.y = yOffsetOfCurrentSubview;
             frame.origin.x = 0;
             frame.size.width = self.contentView.bounds.size.width;
@@ -209,6 +245,21 @@ static void *KVOContext = &KVOContext;
         [self setNeedsLayout];
         [self layoutIfNeeded];
     }
+}
+
+@end
+
+#pragma mark -
+
+@implementation UIView (WrappedView)
+
+- (UIScrollView *)ole_wrappedScrollView {
+    return ([self isKindOfClass:[UIScrollView class]]
+            ? self
+            : (self.subviews.count > 0 && [self.subviews.firstObject isKindOfClass:[UIScrollView class]]
+               ? self.subviews.firstObject
+               : nil
+               ));
 }
 
 @end
