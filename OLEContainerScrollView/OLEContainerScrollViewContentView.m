@@ -21,10 +21,10 @@
 
 - (void)willRemoveSubview:(UIView *)subview
 {
-    [super willRemoveSubview:subview];
     if ([self.superview isKindOfClass:[OLEContainerScrollView class]]) {
         [(OLEContainerScrollView *)self.superview willRemoveSubviewFromContainer:subview];
     }
+    [super willRemoveSubview:subview];
 }
 
 @end
