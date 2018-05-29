@@ -67,6 +67,14 @@
 {
     NSParameterAssert(subview != nil);
 
+    NSUInteger ix = [self.subviewsInLayoutOrder indexOfObjectIdenticalTo:subview];
+    if (ix != NSNotFound) {
+        [self.subviewsInLayoutOrder removeObjectAtIndex:ix];
+        [self.subviewsInLayoutOrder addObject:subview];
+        [self setNeedsLayout];
+        return;
+    }
+
     subview.autoresizingMask = UIViewAutoresizingNone;
 
     [self.subviewsInLayoutOrder addObject:subview];
