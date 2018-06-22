@@ -38,4 +38,9 @@
  */
 @property (nonatomic, readonly) UIView *contentView;
 
+/**
+ Spacing between adjacent edges of subviews.
+ */
+@property (nonatomic) CGFloat spacing;
+
 @end

@@ -59,6 +59,12 @@
     _contentView = [[OLEContainerScrollViewContentView alloc] initWithFrame:CGRectZero];
     [self addSubview:_contentView];
     _subviewsInLayoutOrder = [NSMutableArray arrayWithCapacity:4];
+    _spacing = 0.0;
+}
+
+- (void)setSpacing:(CGFloat)spacing {
+    _spacing = spacing;
+    [self setNeedsLayout];
 }
 
 #pragma mark - Adding and removing subviews
@@ -154,9 +160,10 @@ static void *KVOContext = &KVOContext;
     // to the container. For scroll views, we reserve their entire contentSize.height as vertical
     // space. For non-scroll views, we reserve their current frame.size.height as vertical space.
     CGFloat yOffsetOfCurrentSubview = 0.0;
-    
-    for (UIView *subview in self.subviewsInLayoutOrder)
+
+    for (int index = 0; index < self.subviewsInLayoutOrder.count; index++)
     {
+        UIView *subview = self.subviewsInLayoutOrder[index];
         if ([subview isKindOfClass:[UIScrollView class]]) {
             UIScrollView *scrollView = (UIScrollView *)subview;
             CGRect frame = scrollView.frame;
@@ -202,6 +209,10 @@ static void *KVOContext = &KVOContext;
             subview.frame = frame;
             
             yOffsetOfCurrentSubview += frame.size.height;
+        }
+
+        if (index < (self.subviewsInLayoutOrder.count - 1)) {
+            yOffsetOfCurrentSubview += self.spacing;
         }
     }
     
