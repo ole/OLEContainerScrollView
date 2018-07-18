@@ -57,3 +57,13 @@
 
 @end
 
+@interface UIScrollView () <OLEContainerScrollViewScrollable>
+@end
+
+@implementation UIScrollView (OLEContainerScrollViewScrollable)
+- (UIScrollView *)scrollView
+{
+    return self;
+}
+@end
+

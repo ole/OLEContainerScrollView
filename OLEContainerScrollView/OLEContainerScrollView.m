@@ -191,42 +191,7 @@ static void *KVOContext = &KVOContext;
             continue;
         }
         
-        if ([subview isKindOfClass:[UIScrollView class]]) {
-            UIScrollView *scrollView = (UIScrollView *)subview;
-            CGRect frame = scrollView.frame;
-            CGPoint contentOffset = scrollView.contentOffset;
-
-            // Translate the logical offset into the sub-scrollview's real content offset and frame size.
-            // Methodology:
-
-            // (1) As long as the sub-scrollview has not yet reached the top of the screen, set its scroll position
-            // to 0.0 and position it just like a normal view. Its content scrolls naturally as the container
-            // scroll view scrolls.
-            if (self.contentOffset.y < yOffsetOfCurrentSubview) {
-                contentOffset.y = 0.0;
-                frame.origin.y = yOffsetOfCurrentSubview;
-            }
-            // (2) If the user has scrolled far enough down so that the sub-scrollview reaches the top of the
-            // screen, position its frame at 0.0 and start adjusting the sub-scrollview's content offset to
-            // scroll its content.
-            else {
-                contentOffset.y = self.contentOffset.y - yOffsetOfCurrentSubview;
-                frame.origin.y = self.contentOffset.y;
-            }
-
-            // (3) The sub-scrollview's frame should never extend beyond the bottom of the screen, even if its
-            // content height is potentially much greater. When the user has scrolled so far that the remaining
-            // content height is smaller than the height of the screen, adjust the frame height accordingly.
-            CGFloat remainingBoundsHeight = fmax(CGRectGetMaxY(self.bounds) - CGRectGetMinY(frame), 0.0);
-            CGFloat remainingContentHeight = fmax(scrollView.contentSize.height - contentOffset.y, 0.0);
-            frame.size.height = fmin(remainingBoundsHeight, remainingContentHeight);
-            frame.size.width = self.contentView.bounds.size.width;
-            
-            scrollView.frame = frame;
-            scrollView.contentOffset = contentOffset;
-
-            yOffsetOfCurrentSubview += scrollView.contentSize.height + scrollView.contentInset.top + scrollView.contentInset.bottom;
-        } else if ([subview respondsToSelector:@selector(scrollView)]) {
+        if ([subview respondsToSelector:@selector(scrollView)]) {
             UIScrollView *scrollView = [subview performSelector:@selector(scrollView)];
             CGRect frame = subview.frame;
             CGPoint contentOffset = scrollView.contentOffset;
