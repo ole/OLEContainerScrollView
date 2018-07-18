@@ -44,3 +44,11 @@
 @property (nonatomic) CGFloat spacing;
 
 @end
+
+
+@protocol OLEContainerScrollViewScrollable
+@required
+@property (nonatomic, readonly) UIScrollView *scrollView;
+
+@end
+
