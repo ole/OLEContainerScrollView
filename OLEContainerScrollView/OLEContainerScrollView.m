@@ -60,10 +60,16 @@
     [self addSubview:_contentView];
     _subviewsInLayoutOrder = [NSMutableArray arrayWithCapacity:4];
     _spacing = 0.0;
+    _ignoreHiddenSubviews = YES;
 }
 
 - (void)setSpacing:(CGFloat)spacing {
     _spacing = spacing;
+    [self setNeedsLayout];
+}
+
+- (void)setIgnoreHiddenSubviews:(BOOL)newValue {
+    _ignoreHiddenSubviews = newValue;
     [self setNeedsLayout];
 }
 
@@ -171,6 +177,20 @@ static void *KVOContext = &KVOContext;
     for (int index = 0; index < self.subviewsInLayoutOrder.count; index++)
     {
         UIView *subview = self.subviewsInLayoutOrder[index];
+        
+        // Make the height hidden subviews zero in order to behave like UIStackView.
+        if (self.ignoreHiddenSubviews && subview.hidden) {
+            CGRect frame = subview.frame;
+            frame.origin.y = yOffsetOfCurrentSubview;
+            frame.origin.x = 0;
+            frame.size.width = self.contentView.bounds.size.width;
+            subview.frame = frame;
+            
+            // Do not set the height to zero. Just don't add the original height to yOffsetOfCurrentSubview.
+            // This is to keep the original height when the view is unhidden.
+            continue;
+        }
+        
         if ([subview isKindOfClass:[UIScrollView class]]) {
             UIScrollView *scrollView = (UIScrollView *)subview;
             CGRect frame = scrollView.frame;

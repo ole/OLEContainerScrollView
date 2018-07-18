@@ -43,6 +43,11 @@
  */
 @property (nonatomic) CGFloat spacing;
 
+/**
+ All hidden subviews are ignored in layout, this is similar to what UIStackView does
+ */
+@property (nonatomic) BOOL ignoreHiddenSubviews;
+
 @end
 
 
