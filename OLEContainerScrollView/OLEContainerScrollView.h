@@ -43,4 +43,27 @@
  */
 @property (nonatomic) CGFloat spacing;
 
+/**
+ All hidden subviews are ignored in layout, this is similar to what UIStackView does
+ */
+@property (nonatomic) BOOL ignoreHiddenSubviews;
+
 @end
+
+
+@protocol OLEContainerScrollViewScrollable
+@required
+@property (nonatomic, readonly) UIScrollView *scrollView;
+
+@end
+
+@interface UIScrollView () <OLEContainerScrollViewScrollable>
+@end
+
+@implementation UIScrollView (OLEContainerScrollViewScrollable)
+- (UIScrollView *)scrollView
+{
+    return self;
+}
+@end
+

@@ -5,5 +5,5 @@
  https://github.com/ole/OLEContainerScrollView
  */
 
-void swizzleUICollectionViewLayoutFinalizeCollectionViewUpdates();
-void swizzleUITableView();
+void swizzleUICollectionViewLayoutFinalizeCollectionViewUpdates(void);
+void swizzleUITableView(void);
