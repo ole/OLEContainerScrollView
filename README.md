@@ -4,6 +4,12 @@ A `UIScrollView` subclass that intelligently handles multiple child scroll views
 
 Written by Ole Begemann, May 2014.
 
+## Not maintained
+
+**This project is not being maintained. I’m not using it myself and I don’t want to spend time on it adding more features.**
+
+**I still think the code contains some good ideas. Feel free to read the code and take ideas from it and/or maintain your own fork.**
+
 ## Blog Post
 
 Please read my [blog post about OLEContainerScrollView](http://oleb.net/blog/2014/05/scrollviews-inside-scrollviews/) for details about the implementation.
