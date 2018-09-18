@@ -4,11 +4,9 @@ A `UIScrollView` subclass that intelligently handles multiple child scroll views
 
 Written by Ole Begemann, May 2014.
 
-## Not maintained
+## ⚠️ No maintenance ⚠️
 
-**This project is not being maintained. I’m not using it myself and I don’t want to spend time on it adding more features.**
-
-**I still think the code contains some good ideas. Feel free to read the code and take ideas from it and/or maintain your own fork.**
+**This project is not being maintained. I’m not using it myself and I don’t want to spend time on it adding more features. I still think the code contains some good ideas. Feel free to read the code and take ideas from it and/or maintain your own fork.**
 
 ## Blog Post
 
